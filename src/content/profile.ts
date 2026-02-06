@@ -15,7 +15,7 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Arpan Layek",
-  headline: "Backend-heavy Full‑stack Developer",
+  headline: "Full Stack Developer",
   tagline: "I build reliable APIs and ship clean, modern web experiences.",
   location: "Bankura, West Bengal, India",
   avatarUrl: "/profile_image.png",

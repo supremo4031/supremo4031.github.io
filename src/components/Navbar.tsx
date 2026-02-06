@@ -20,14 +20,14 @@ export function Navbar() {
             className="rounded-lg px-2 py-1 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-400/60 dark:text-white dark:hover:bg-white/10"
             onClick={() => jumpTo("home")}
           >
-            Portfolio
+            Arpan Layek
           </button>
 
           <div className="hidden items-center gap-6 md:flex">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
-                className="text-sm text-slate-200 hover:text-white"
+                className="text-sm text-slate-200 hover:text-white cursor-pointer"
                 onClick={() => jumpTo(item.id)}
               >
                 {item.label}

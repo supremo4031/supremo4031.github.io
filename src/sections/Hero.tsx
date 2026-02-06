@@ -22,19 +22,19 @@ export function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <LinkButton href={profile.resumePath} variant="primary">
+              <LinkButton href={profile.resumePath} target="_blank">
                 Download Resume
               </LinkButton>
-              <LinkButton
+              {/* <LinkButton
                 href={profile.socials.find((s) => s.label === "GitHub")?.href ?? "#"}
                 target="_blank"
                 rel="noreferrer"
               >
                 View GitHub
               </LinkButton>
-              <LinkButton href="#contact" variant="ghost">
+              <LinkButton href="#contact">
                 Contact
-              </LinkButton>
+              </LinkButton> */}
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-slate-300">
@@ -54,11 +54,18 @@ export function Hero() {
 
           {profile.avatarUrl ? (
             <div className="flex justify-center md:justify-end">
-              <div className="relative h-40 w-40 overflow-hidden rounded-full border border-white/10 bg-slate-900/60 shadow-xl sm:h-48 sm:w-48 md:h-56 md:w-56">
+              <div className="group relative h-40 w-40 overflow-hidden rounded-full border border-white/10 
+                              hover:border-white/40 
+                              hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
+                              transition-all duration-300 
+                              bg-slate-900/60 shadow-xl sm:h-48 sm:w-48 md:h-56 md:w-56">
                 <img
                   src={profile.avatarUrl}
                   alt={profile.name}
-                  className="h-full w-full object-cover"
+                  className="w-full h-full rounded-full object-cover
+                             transition-all duration-300
+                             group-hover:scale-105
+                             group-hover:shadow-[0_0_40px_rgba(255,255,255,0.25)]"
                 />
               </div>
             </div>

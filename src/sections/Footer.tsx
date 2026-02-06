@@ -13,7 +13,7 @@ export function Footer() {
               {profile.headline}
             </p>
             <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
-              Built with React, Vite, and Tailwind.
+              @ {new Date().getFullYear()}  ARPAN  LAYEK.  ALL  RIGHTS  RESERVED.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-x-10 gap-y-2 text-sm sm:grid-cols-3">
