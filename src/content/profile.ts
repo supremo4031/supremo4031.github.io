@@ -18,7 +18,7 @@ export const profile: Profile = {
   headline: "Full Stack Developer",
   tagline: "I build reliable APIs and ship clean, modern web experiences.",
   location: "Bankura, West Bengal, India",
-  avatarUrl: "/profile_image.png",
+  avatarUrl: "/profile_image_new.jpg",
   aboutParagraphs: [
     "Backend-heavy Software Engineer with 4+ years of experience across the logistics and e-commerce sectors. I thrive at the intersection of system design and product delivery, whether it’s reducing API latency by 50% through Kafka pipelines or leading backend teams to improve code quality and velocity.",
     "I am passionate about designing robust APIs, improving system observability, and shipping pragmatic solutions that scale.",

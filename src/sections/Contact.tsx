@@ -12,49 +12,25 @@ export function Contact() {
       <Container>
         <SectionHeader title="Contact" subtitle="Best ways to reach me." />
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-2xl border border-slate-200 
-                          hover:border-white/40 
-                          hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
-                          transition-all duration-300
-                          bg-slate-50 p-6 dark:border-white/10 dark:bg-white/5">
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">Email</p>
-            <a
-              className="mt-2 block text-sm text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
-              href={email?.href ?? "mailto:you@example.com"}
+          {profile.socials.map((p) => (
+            <article
+              key={p.label}
+              className="rounded-2xl border border-slate-200 
+                         hover:border-white/40 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] 
+                         transition-all duration-300 
+                         cursor-pointer
+                         bg-slate-50 p-6 dark:border-white/10 dark:bg-white/5"
             >
-              {email?.href.replace("mailto:", "") ?? "you@example.com"}
-            </a>
-          </div>
-          <div className="rounded-2xl border border-slate-200 
-                          hover:border-white/40 
-                          hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
-                          transition-all duration-300
-                          bg-slate-50 p-6 dark:border-white/10 dark:bg-white/5">
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">GitHub</p>
-            <a
-              className="mt-2 block text-sm text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
-              href={github?.href ?? "#"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {github?.href ?? "https://github.com/your-handle"}
-            </a>
-          </div>
-          <div className="rounded-2xl border border-slate-200 
-                          hover:border-white/40 
-                          hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
-                          ransition-all duration-300
-                          bg-slate-50 p-6 dark:border-white/10 dark:bg-white/5">
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">LinkedIn</p>
-            <a
-              className="mt-2 block text-sm text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white"
-              href={linkedin?.href ?? "#"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {linkedin?.href ?? "https://www.linkedin.com/in/your-handle/"}
-            </a>
-          </div>
+              <a href={p.href} target="_blank">
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
+                  {p.label}
+                </h3>
+                <div className="mt-2 block text-sm text-slate-700 hover:text-slate-900 dark:text-slate-200 dark:hover:text-white">
+                  {p.label === "Email" ? p.href.replace("mailto:", "") : p.href}
+                </div>
+              </a>
+            </article>
+          ))}
         </div>
         <p className="mt-6 text-sm text-slate-500 dark:text-slate-400">
           Location: <span className="text-slate-700 dark:text-slate-300">{profile.location}</span>

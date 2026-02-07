@@ -54,7 +54,7 @@ export function Hero() {
 
           {profile.avatarUrl ? (
             <div className="flex justify-center md:justify-end">
-              <div className="group relative h-40 w-40 overflow-hidden rounded-full border border-white/10 
+              <div className="group relative h-50 w-50 overflow-hidden rounded-full border border-white/10 
                               hover:border-white/40 
                               hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]
                               transition-all duration-300 
